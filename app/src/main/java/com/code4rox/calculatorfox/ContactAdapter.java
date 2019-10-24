@@ -1,6 +1,8 @@
 package com.code4rox.calculatorfox;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +21,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
         this.contactvolist=contactvolist;
         this.mContext=mcontext;
 
+
     }
     @NonNull
     @Override
@@ -34,6 +37,14 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
         contactvo cont=contactvolist.get(position);
         holder.tv1.setText(cont.getContactName());
         holder.tv2.setText(cont.getContactNumber());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in=new Intent(Intent.ACTION_CALL,Uri.fromParts("tel",cont.getContactNumber(),null));
+                in.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                mContext.startActivity(in);
+            }
+        });
     }
 
     @Override

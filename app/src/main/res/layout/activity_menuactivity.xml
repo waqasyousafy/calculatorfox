@@ -14,6 +14,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:background="#fff"
         android:gravity="center|center_horizontal|top|center_vertical"
         android:paddingTop="10dp"
@@ -23,7 +24,7 @@
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,10 +32,9 @@
         android:id="@+id/logo"
         android:layout_width="282dp"
         android:layout_height="212dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:foregroundGravity="center|center_horizontal"
         app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
-        app:layout_constraintDimensionRatio="h,1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
